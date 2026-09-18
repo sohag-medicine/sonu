@@ -1,21 +1,21 @@
 :root {
-  --bg: #eef3f0;
+  --bg: #fbf6ee;
   --surface: #ffffff;
-  --ink: #10241f;
-  --ink-muted: #4b6158;
-  --brand: #0b4f45;
-  --brand-dark: #073a32;
-  --brand-soft: #e3efe9;
-  --accent: #c99a3d;
-  --accent-soft: #f6ecd3;
-  --border: #dfe7e2;
-  --error: #b3261e;
+  --ink: #241005;
+  --ink-muted: #6b5546;
+  --brand: #6b0000;
+  --brand-dark: #470000;
+  --brand-soft: #f5e4e2;
+  --accent: #d98f2b;
+  --accent-soft: #faecd0;
+  --border: #efe4d2;
+  --error: #a3271e;
   --error-soft: #fbeceb;
-  --success: #1b7a43;
-  --success-soft: #e9f6ee;
+  --success: #4f6a1b;
+  --success-soft: #eef2e2;
   --radius-lg: 18px;
   --radius-md: 12px;
-  --shadow: 0 1px 2px rgba(16, 36, 31, 0.04), 0 8px 24px rgba(16, 36, 31, 0.06);
+  --shadow: 0 1px 2px rgba(36, 16, 5, 0.05), 0 8px 24px rgba(36, 16, 5, 0.07);
 }
 
 * {
@@ -25,7 +25,7 @@
 body {
   margin: 0;
   background: var(--bg);
-  background-image: radial-gradient(circle at 15% 0%, #dfece5 0%, transparent 45%);
+  background-image: radial-gradient(circle at 15% 0%, #f5e9d2 0%, transparent 45%);
   color: var(--ink);
   font-family: "Tajawal", "Segoe UI", sans-serif;
   line-height: 1.6;
@@ -111,14 +111,14 @@ body {
   letter-spacing: 0.02em;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
-  background: #fbfcfb;
+  background: #fefcf8;
   color: var(--ink);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 #nationalID::placeholder {
   font-family: "Tajawal", sans-serif;
-  color: #9aa8a1;
+  color: #a99a89;
   font-size: 14px;
 }
 
@@ -235,7 +235,7 @@ button#searchBtn:focus-visible {
 .student-card dd.code {
   font-family: "JetBrains Mono", monospace;
   background: var(--accent-soft);
-  color: #7a5a17;
+  color: #7a4a12;
   display: inline-block;
   padding: 3px 10px;
   border-radius: 6px;
