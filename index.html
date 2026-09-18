@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أكواد منصتي زاد ومودل | الجامعة الأهلية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="site-header">
+      <!-- Uncomment once you have a logo file:
+      <img src="logo.png" alt="شعار الجامعة الأهلية" id="logo">
+      -->
+      <p class="eyebrow">الجامعة الأهلية</p>
+      <h1>الحصول على أكواد الطلبة الجدد<br>على منصتي زاد ومودل</h1>
+    </header>
+
+    <main>
+      <section class="lookup-card" aria-label="البحث عن أكواد الطالب">
+        <label for="nationalID" class="field-label">الرقم القومي</label>
+        <div class="search-row">
+          <input
+            type="text"
+            id="nationalID"
+            placeholder="ادخل الرقم القومي المكوّن من ١٤ رقمًا"
+            maxlength="14"
+            inputmode="numeric"
+            autocomplete="off"
+          >
+          <button id="searchBtn" onclick="retrieveInfo()">
+            <span class="btn-label">بحث</span>
+          </button>
+        </div>
+
+        <div id="resultArea" class="result-area" aria-live="polite">
+          <!-- Result / status states are injected here by script.js -->
+        </div>
+      </section>
+
+      <section class="instructions-card">
+        <h2>تعليمات هامة</h2>
+        <ul>
+          <li>كود الطالب هو نفسه على كِلا المنصتين: <strong>زاد</strong> و<strong>مودل</strong>.</li>
+          <li>كلمة المرور الافتراضية على كِلا المنصتين هي <strong>الرقم القومي</strong>، وتُستخدم مرة واحدة فقط.</li>
+          <li>يجب على الطالب تغييرها بعد أول دخول بكلمة جديدة (حروف وأرقام، ولا تقل عن 8 عناصر).</li>
+          <li>يُفضّل استخدام كلمة مرور مختلفة لكل منصة بعد أول تسجيل دخول.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>الجامعة الأهلية</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
