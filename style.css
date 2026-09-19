@@ -268,6 +268,65 @@ button#searchBtn:focus-visible {
   color: var(--ink);
 }
 
+/* ---------- Platform links ---------- */
+
+.platforms-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.platforms-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.platforms-list a:hover {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.platform-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 3px;
+}
+
+.platform-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.platform-title {
+  font-family: "Cairo", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.platform-go {
+  font-size: 16px;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {

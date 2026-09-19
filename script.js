@@ -1,6 +1,6 @@
 // Replace this with your deployed Worker URL once you run `wrangler deploy`, e.g.
 // "https://ahliya-lookup.YOUR-SUBDOMAIN.workers.dev"
-const API_URL = "https://ahliya-lookup.zadmed.workers.dev";
+const API_URL = "https://ahliya-lookup.YOUR-SUBDOMAIN.workers.dev";
 
 function setState(html) {
   document.getElementById("resultArea").innerHTML = html;
