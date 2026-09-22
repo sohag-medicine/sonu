@@ -19,6 +19,13 @@ function errorState(message) {
 }
 
 function studentState(student) {
+  const groupRow = student.group
+    ? `<dt>المجموعة</dt><dd>${escapeHtml(student.group)}</dd>`
+    : "";
+  const sectionRow = student.section
+    ? `<dt>السكشن</dt><dd>${escapeHtml(student.section)}</dd>`
+    : "";
+
   setState(`
     <div class="student-card">
       <div class="ribbon">تم العثور على الطالب</div>
@@ -27,6 +34,8 @@ function studentState(student) {
         <dd>${escapeHtml(student.name)}</dd>
         <dt>كود الدخول (زاد ومودل)</dt>
         <dd class="code">${escapeHtml(student.usercode)}</dd>
+        ${groupRow}
+        ${sectionRow}
       </dl>
     </div>
   `);
