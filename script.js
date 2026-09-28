@@ -1,5 +1,3 @@
-// Replace this with your deployed Worker URL once you run `wrangler deploy`, e.g.
-// "https://ahliya-lookup.YOUR-SUBDOMAIN.workers.dev"
 const API_URL = "https://ahliya-lookup.zadmed.workers.dev";
 
 function setState(html) {
@@ -19,6 +17,9 @@ function errorState(message) {
 }
 
 function studentState(student) {
+  const yearRow = student.year
+    ? `<dt>الفرقة</dt><dd>${escapeHtml(student.year)}</dd>`
+    : "";
   const groupRow = student.group
     ? `<dt>المجموعة</dt><dd>${escapeHtml(student.group)}</dd>`
     : "";
@@ -32,10 +33,11 @@ function studentState(student) {
       <dl>
         <dt>اسم الطالب</dt>
         <dd>${escapeHtml(student.name)}</dd>
-        <dt>كود الدخول (زاد ومودل)</dt>
-        <dd class="code">${escapeHtml(student.usercode)}</dd>
+        ${yearRow}
         ${groupRow}
         ${sectionRow}
+        <dt>كود الدخول (زاد ومودل)</dt>
+        <dd class="code">${escapeHtml(student.usercode)}</dd>
       </dl>
     </div>
   `);
