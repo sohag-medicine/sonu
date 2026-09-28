@@ -19,6 +19,9 @@ function errorState(message) {
 }
 
 function studentState(student) {
+  const yearRow = student.year
+    ? `<dt>الفرقة</dt><dd>${escapeHtml(student.year)}</dd>`
+    : "";
   const groupRow = student.group
     ? `<dt>المجموعة</dt><dd>${escapeHtml(student.group)}</dd>`
     : "";
@@ -34,6 +37,7 @@ function studentState(student) {
         <dd>${escapeHtml(student.name)}</dd>
         <dt>كود الدخول (زاد ومودل)</dt>
         <dd class="code">${escapeHtml(student.usercode)}</dd>
+        ${yearRow}
         ${groupRow}
         ${sectionRow}
       </dl>
